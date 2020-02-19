@@ -7,25 +7,56 @@
 <body>
     <script>
 
-        // function fun1()    { return 1; }
+        document.writeln(1 !== 2);
+
+        function fun1()    { return 1; }
+
+        document.writeln( fun1()   === 1 );
+        document.writeln( fun1(42) === 1 );
+
+        function fun2()    { return 1; }
+        function fun2(arg) { return arg; }
+
+        document.writeln( fun2() !== 1  );
+        document.writeln( fun2() === undefined );
+        document.writeln( fun2(42) === 42 );
+
+        function fun1()    { return 1; }
+
+        document.writeln( fun1()   === 1 );
+        document.writeln( fun1(42) === 1 );
+
+        function fun2()    { return 1; }
+        function fun2(arg) { return arg; }
+
+        document.writeln( fun2() !== 1  );
+        document.writeln( fun2() === undefined );
+        document.writeln( fun2(42) === 42 );
+
+        function noReturn()    { 1; }
+        const noReturn2 = () => { 1; }; // returnt undefined
+        const noReturn3 = () => 1;  // funktioniert, wichtig !!
+
+
+        document.writeln( noReturn() !== 1 );
+        document.writeln( noReturn2() !== 1 );
+        document.writeln( noReturn3() === 1 );
+
+        // es gibt keinen Kompilerfehler
+        // const noReturn3 = () => 1;  //
+        // const noReturn3 = () => 1;  // doppeldeklaration, es funktioniert nichts mehr, Laufzeitfehler
+
+        // if (x=1) {  // if block wird immer ausgeführt, x wird 1 zugewiesen
         //
-        // document.writeln( fun1()   === 1 );
-        // document.writeln( fun1(42) === 1 );
-        //
-        // function fun2()    { return 1; }
-        // function fun2(arg) { return arg; }
-        //
-        // document.writeln( fun2() !== 1  );
-        // document.writeln( fun2() === undefined );
-        // document.writeln( fun2(42) === 42 );
-        //
-        // function noReturn()    { 1; }
-        // const noReturn2 = () => { 1; };
-        // const noReturn3 = () => 1;
-        //
-        // document.writeln( noReturn() !== 1 );
-        // document.writeln( noReturn2() !== 1 );
-        // document.writeln( noReturn3() === 1 );
+        // }
+
+        // DER FESTE WERT AUF DIE linke seite...
+        // if (1 === x)
+
+
+        // YODA Condition
+
+
         //
         // const myfun = fun1;
         // const funs = [null, undefined, fun1, fun2];
